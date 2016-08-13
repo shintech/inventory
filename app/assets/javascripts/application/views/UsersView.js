@@ -1,6 +1,5 @@
 var UsersView = Backbone.View.extend({
   el: '#usersList',
-  // tagName: 'li',
   initialize: function(){
     this.listenTo(this.collection, 'sync', this.render);
   },

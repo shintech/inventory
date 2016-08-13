@@ -3,7 +3,10 @@
 <head>
   <title>NewInventoryBb</title>
   <script id='userViewTemplate' type='text/template'>
-    <h1>{{ firstname }} {{ lastname }}</h1>
+    <li><h1>{{ firstname }} {{ lastname }}</h1></li>
+      <li>Username: {{ username }}</li>
+      <li>Email: {{ email }}</li>
+      <hr>
   </script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
