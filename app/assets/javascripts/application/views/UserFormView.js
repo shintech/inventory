@@ -3,7 +3,8 @@ var UserFormView = Backbone.View.extend({
   button: _.template("<button id='showFormButton'>Button</button>"),
   form: _.template($('#userFormTemplate').html()),
   events: {
-    'click #showFormButton': 'showForm'
+    'click #showFormButton': 'showForm',
+    'click #submitUser': 'addUser'
   },
   render: function(){
     console.log('UserFormView rendered...')
@@ -15,4 +16,8 @@ var UserFormView = Backbone.View.extend({
     this.$el.html(this.form());
     return false;
   },
+  addUser: function(){
+    console.log('#submitUser button pushed...')
+    return false;
+  }
 })
