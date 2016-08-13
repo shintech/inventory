@@ -23,11 +23,10 @@ var UserFormView = Backbone.View.extend({
     console.log('#submitUser button pushed...')
     var userAttrs = {
       firstname: $('#firstName').val(),
-      last_name: $('#lastName').val(),
+      lastname: $('#lastName').val(),
       email: $('#eMail').val(),
       username: $('#userName').val()
     }
     this.users.create(userAttrs);
-    return false;
   }
-})
+});
