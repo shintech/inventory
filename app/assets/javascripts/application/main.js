@@ -19,4 +19,6 @@ var applicationRouter = new ApplicationRouter({
   devices: this.devices
 });
 Backbone.history.start()
-})
+var navigationView = new NavigationView({router: applicationRouter});
+navigationView.render()
+});

@@ -14,4 +14,5 @@
 //= require ./lib/underscore
 //= require ./lib/backbone
 //= require_tree ./application/
+//= require ./application/main
 
