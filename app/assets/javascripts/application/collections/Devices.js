@@ -1,3 +1,3 @@
 var Devices = Backbone.Collection.extend({
-  url: 'devices',
-})
+  url: 'devices'
+});
