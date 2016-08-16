@@ -6,10 +6,17 @@ _.templateSettings = {
 // users.fetch();
 // var usersView = new UsersView({collection: users })
 
+// $(function(){
+//   var users = new Users;
+//   users.fetch();
+//   var usersView = new UsersView({collection: users })
+//   var userFormView = new UserFormView({users: users});
+//   userFormView.render();
+// })
 $(function(){
-  var users = new Users;
-  users.fetch();
-  var usersView = new UsersView({collection: users })
-  var userFormView = new UserFormView({users: users});
-  userFormView.render();
+var applicationRouter = new ApplicationRouter({
+  users: this.users,
+  devices: this.devices
+});
+Backbone.history.start()
 })
