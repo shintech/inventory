@@ -6,6 +6,7 @@ var DevicesView = Backbone.View.extend({
   },
   render: function(){
     console.log('DevicesView rendered...');
+    this.$el.html('');
     this.collection.each(this.addDevice, this);
     return this;
   },

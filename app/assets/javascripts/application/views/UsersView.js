@@ -6,6 +6,7 @@ var UsersView = Backbone.View.extend({
   },
   render: function(){
     console.log('UsersView rendered...')
+    this.$el.html('')
     this.collection.each(this.addUser, this);
     return this;
   },
