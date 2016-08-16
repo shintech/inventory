@@ -29,5 +29,6 @@ var UserFormView = Backbone.View.extend({
       username: $('#userName').val()
     }
     this.users.create(userAttrs);
+    return false;
   },
 });
