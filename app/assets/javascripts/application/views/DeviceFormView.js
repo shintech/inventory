@@ -1,6 +1,6 @@
 var DeviceFormView = Backbone.View.extend({
   el: '#userForm',
-  button: _.template("<button id='showFormButton'>Button</button>"),
+  button: _.template("<button id='showFormButton'>New Device</button>"),
   form: _.template($('#deviceFormTemplate').html()),
   initialize: function(options){
     this.devices = options.devices;
@@ -22,9 +22,10 @@ var DeviceFormView = Backbone.View.extend({
   addDevice: function(){
     var deviceAttrs = {
       name: $('#deviceName').val(),
-      serial_number: $('#deviceSN').val() 
+      serial_number: $('#deviceSN').val()
     }
     this.devices.create(deviceAttrs);
+    this.render();
     return false;
   }
 })

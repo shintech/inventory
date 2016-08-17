@@ -15,8 +15,8 @@ var ApplicationRouter = Backbone.Router.extend({
   devicesNavigate: function(){
     var devices = new Devices;
     devices.fetch();
-    var devicesView = new DevicesView({collection: devices});
+    var devicesView = new DevicesView({collection: devices });
     var deviceFormView = new DeviceFormView({devices: devices});
-    deviceFormView.render()
+    deviceFormView.render();
   }
 })

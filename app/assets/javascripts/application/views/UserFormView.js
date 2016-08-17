@@ -1,6 +1,6 @@
 var UserFormView = Backbone.View.extend({
   el: '#userForm',
-  button: _.template("<button id='showFormButton'>Button</button>"),
+  button: _.template("<button id='showFormButton'>New User</button>"),
   form: _.template($('#userFormTemplate').html()),
   initialize: function(options){
     this.users = options.users;
@@ -30,6 +30,7 @@ var UserFormView = Backbone.View.extend({
       username: $('#userName').val()
     }
     this.users.create(userAttrs);
+    this.render();
     return false;
   },
 });
