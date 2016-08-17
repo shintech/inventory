@@ -3,6 +3,7 @@ var DevicesView = Backbone.View.extend({
   initialize: function(){
     console.log("Devices View created...");
     this.listenTo(this.collection, 'sync', this.render);
+    this.listenTo(this.collection, 'add', this.render);
   },
   render: function(){
     console.log('DevicesView rendered...');
@@ -12,6 +13,6 @@ var DevicesView = Backbone.View.extend({
   },
   addDevice: function(device){
     var deviceView = new DeviceView({model: device});
-    this.$el.append(deviceView.render().el);
+    this.$el.prepend(deviceView.render().el);
   }
 });

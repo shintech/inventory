@@ -3,6 +3,7 @@ var UsersView = Backbone.View.extend({
   initialize: function(){
     console.log("UsersView created...")
     this.listenTo(this.collection, 'sync', this.render);
+    this.listenTo(this.collection, 'add', this.render);
   },
   render: function(){
     console.log('UsersView rendered...')
@@ -12,6 +13,6 @@ var UsersView = Backbone.View.extend({
   },
   addUser: function(user){
     var userView = new UserView({model: user});
-    this.$el.append(userView.render().el);
+    this.$el.prepend(userView.render().el);
   }
 });
