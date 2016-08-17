@@ -12,6 +12,7 @@ var UserFormView = Backbone.View.extend({
   },
   render: function(){
     console.log('UserFormView rendered...')
+    this.$el.html('');
     this.$el.html(this.button());
     return this;
   },
