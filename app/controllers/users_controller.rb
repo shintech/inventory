@@ -17,7 +17,12 @@ class UsersController < ApplicationController
   end
   
   def create
-    @user = User.create(user_params)
+    @user = User.new(user_params)
+      if @user.save
+        respond_to do |format|
+          format.json { render nothing: true }
+      end
+    end
   end
   
   private

@@ -17,7 +17,12 @@ class DevicesController < ApplicationController
   end
   
   def create
-    @device = Device.create(device_params)
+    @device = Device.new(device_params)
+    if @device.save
+      respond_to do |format|
+        format.json { render nothing: true }
+      end
+    end
   end
   
   private
