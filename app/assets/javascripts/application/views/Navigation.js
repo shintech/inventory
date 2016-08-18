@@ -12,11 +12,11 @@ var NavigationView = Backbone.View.extend({
     this.$el.html(this.template());
   },
   navigateUsers: function(){
-    console.log("nav button clicked...")
+    // console.log("nav button clicked...")
     this.router.navigate('users', {trigger: true} )
   }, 
   navigateDevices: function(){
-    console.log('nav devices pushed...')
+    // console.log('nav devices pushed...')
     this.router.navigate('devices', {trigger: true})
   }
 })

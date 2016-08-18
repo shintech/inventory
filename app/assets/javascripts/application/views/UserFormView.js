@@ -11,18 +11,18 @@ var UserFormView = Backbone.View.extend({
     'click #cancelButton': 'render'
   },
   render: function(){
-    console.log('UserFormView rendered...')
+    // console.log('UserFormView rendered...')
     this.$el.html('');
     this.$el.html(this.button());
     return this;
   },
   showForm: function(){
-    console.log('#showFormButton pushed...')
+    // console.log('#showFormButton pushed...')
     this.$el.html(this.form());
     return false;
   },
   addUser: function(){
-    console.log('#submitUser button pushed...')
+    // console.log('#submitUser button pushed...')
     var userAttrs = {
       firstname: $('#firstName').val(),
       lastname: $('#lastName').val(),
