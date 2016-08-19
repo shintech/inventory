@@ -11,7 +11,6 @@ var DeviceFormView = Backbone.View.extend({
     'click #cancelButton': 'render'
   },
   render: function(){
-    // this.$el.html(''),
     this.$el.html(this.button());
     return this;
   },
