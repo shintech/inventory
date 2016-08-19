@@ -1,5 +1,5 @@
 var UserFormView = Backbone.View.extend({
-  el: '#userForm',
+  tagName: 'form',
   button: _.template("<button id='showFormButton'>New User</button>"),
   form: _.template($('#userFormTemplate').html()),
   initialize: function(options){
@@ -12,7 +12,7 @@ var UserFormView = Backbone.View.extend({
   },
   render: function(){
     // console.log('UserFormView rendered...')
-    this.$el.html('');
+    // this.$el.html('');
     this.$el.html(this.button());
     return this;
   },

@@ -1,5 +1,5 @@
 var DeviceView = Backbone.View.extend({
-  tagName: 'ul',
+  tagName: 'li',
   template: _.template($('#deviceViewTemplate').html()),
   render: function(){
     // console.log('DeviceView created...');

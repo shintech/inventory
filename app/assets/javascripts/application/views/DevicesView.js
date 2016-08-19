@@ -1,5 +1,5 @@
 var DevicesView = Backbone.View.extend({
-  el: '#usersList',
+  tagName: 'ul',
   initialize: function(){
     // console.log("Devices View created...");
     this.listenTo(this.collection, 'sync', this.render);

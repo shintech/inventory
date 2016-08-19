@@ -1,5 +1,5 @@
 var DeviceFormView = Backbone.View.extend({
-  el: '#userForm',
+  tagName: 'form',
   button: _.template("<button id='showFormButton'>New Device</button>"),
   form: _.template($('#deviceFormTemplate').html()),
   initialize: function(options){
@@ -11,7 +11,7 @@ var DeviceFormView = Backbone.View.extend({
     'click #cancelButton': 'render'
   },
   render: function(){
-    this.$el.html(''),
+    // this.$el.html(''),
     this.$el.html(this.button());
     return this;
   },

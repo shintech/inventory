@@ -6,17 +6,20 @@ var ApplicationRouter = Backbone.Router.extend({
   usersNavigate: function(){
 
     var users = new Users;
-    users.fetch();
     var usersView = new UsersView({collection: users });
+    users.fetch();
+    $('#usersList').html(usersView.el);
+    // console.log(usersView.render().el)
     var userFormView = new UserFormView({users: users});
-    userFormView.render();
+    $('#userForm').html(userFormView.render().el);
 
   }, 
   devicesNavigate: function(){
     var devices = new Devices;
-    devices.fetch();
     var devicesView = new DevicesView({collection: devices });
+    devices.fetch();
+    $('#usersList').html(devicesView.el)
     var deviceFormView = new DeviceFormView({devices: devices});
-    deviceFormView.render();
+    $('#userForm').html(deviceFormView.render().el);
   }
-})
+});

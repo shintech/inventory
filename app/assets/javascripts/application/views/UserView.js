@@ -1,5 +1,5 @@
 var UserView = Backbone.View.extend({
-  tagName: 'ul',
+  tagName: 'li',
   template: _.template($('#userViewTemplate').html()),
   render: function(){
     // console.log(' UserView rendered...')

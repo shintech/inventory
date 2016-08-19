@@ -1,5 +1,5 @@
 var UsersView = Backbone.View.extend({
-  el: '#usersList',
+  tagName: 'ul',
   initialize: function(){
     // console.log("UsersView created...")
     this.listenTo(this.collection, 'sync', this.render);
@@ -7,7 +7,7 @@ var UsersView = Backbone.View.extend({
   },
   render: function(){
     // console.log('UsersView rendered...')
-    this.$el.html('')
+    // this.$el.html('')
     this.collection.each(this.addUser, this);
     return this;
   },
